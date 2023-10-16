@@ -1,0 +1,24 @@
+/*globe*/
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.todo_container {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(194, 225, 237);
+    margin: 100px auto;
+}
+
+.todo_wrap {
+    background-color: rgb(206, 223, 223);
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+
+

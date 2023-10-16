@@ -1,0 +1,7 @@
+.todo_footer {
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 12px !important;
+}

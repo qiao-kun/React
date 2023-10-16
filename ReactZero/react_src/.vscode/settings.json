@@ -1,0 +1,9 @@
+{
+    "html.autoCreateQuotes": true,
+    "javascript.inlayHints.variableTypes.suppressWhenTypeMatchesName": true,
+    "javascript.suggest.classMemberSnippets.enabled": true,
+    "typescript.inlayHints.variableTypes.suppressWhenTypeMatchesName": true,
+    "notebook.breadcrumbs.showCodeCells": true,
+    "compile-hero.disable-compile-files-on-did-save-code": false,
+    "typescript.tsdk": "node_modules\\typescript\\lib"
+}

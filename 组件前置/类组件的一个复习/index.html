@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+    </body>
+    <script>
+        class Person {//创建一个Person类
+            //构造器方法
+            constructor(name, age) {
+                //构造器的this是 类的实例对象
+                // console.log(this, 'this')
+                console.log(this.name = name)
+                // console.log(this.name, 'this.name')
+                // console.log(name, age)
+            }
+            //一般方法
+            speak() {
+                //speak放在拉 -类的原型对象上 供给实例使用.
+                console.log(`我叫${this.name},我年龄是${this.age}`)
+                // speak里的this 是person实例
+            }
+
+        }
+        //创建一个Student类,继承Person类
+        class Student extends Person {
+            constructor(name, age, grade) {
+                super(name, age)//super属性继承父组件 位置:放在所有之前
+                this.grade = grade
+                this.school = '6666'
+            }
+            // 如果父元素中继承的方法无法满足 子类方法 可以重新写方法
+            // 例子:
+            speak() {
+                console.log(`我叫${this.name},我年龄是${this.age},我的年纪是${this.grade}`)
+            }
+            study() {
+                //study方法放在哪里了 ? 类的原型链上 供实例使用
+                //通过Student实例调用 study时,study中的this就是Student实例
+                console.log('我真的很努力的学习了')
+            }
+        }
+        //创建一个Person的实例对象
+        const p1 = new Person('tom', 18)
+        const p2 = new Person('jerry', 19)
+        const s1 = new Student('小崔', 18, '高一')
+        console.log(s1)
+        p1.speak.call({ name: '被call更改的name属性', age: '被更改的年龄属性' })//使用call可以改变speak里面的this指向
+        p2.speak(),
+            s1.speak()
+        //###总结:
+        // 1.类中的构造器不是必要的,要对实例进行一些初始化的操作,如添加指定的属性时候写
+        // 2.如果A类继承了B类,且A类中写了构造器,那么A类构造器中的super是必须要调用的
+        //3.类中定义的方法,都是放在拉类的原型对象上,共实例去使用.
+    </script>
+
+
+</html>

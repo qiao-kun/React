@@ -1,0 +1,13 @@
+.todo_header {
+    line-height: 20px;
+    text-align: center;
+    border: black solid 1.5px;
+}
+
+.todo_header input {
+    text-align: center;
+    border: none;
+    background: none;
+    width: 200px;
+    height: 25px;
+}
